@@ -4,18 +4,18 @@ package bianquezi.com.br.cotamoeda.entity;
  *      author: Paulo Sérgio do Nascimento
  *      date: 13/12/2018
  * */
-public class coin {
+public class Coin {
     String name;
     Double value;
     Double sell;
     Double variation;
 
 
-    public coin() {
+    public Coin() {
     }
 
 
-    public coin(String name, Double value, Double sell, Double variation) {
+    public Coin(String name, Double value, Double sell, Double variation) {
         this.name = name;
         this.value = value;
         this.sell = sell;
