@@ -17,4 +17,17 @@ public class CoinConstants {
         public static int INTERNAL_SERVER_ERROR = 500;
         public static int INTERNET_NOT_AVAILABLE = 901; // valor definido para esse projeto
     }
+
+    public static class NAME{
+        public static String DOLAR = "USD";
+        public static String EURO = "EUR";
+        public static String LIBRA = "GBP";
+        public static String PESO_ARGENTINO = "ARS";
+        public static String BITCOIN = "BTC";
+
+    }
+
+    public static class SIGN{
+        public static String REAL_SIGN = "R$";
+    }
 }

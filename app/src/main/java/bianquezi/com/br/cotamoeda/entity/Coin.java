@@ -6,7 +6,7 @@ package bianquezi.com.br.cotamoeda.entity;
  * */
 public class Coin {
     String name;
-    Double value;
+    Double buy;
     Double sell;
     Double variation;
 
@@ -15,13 +15,12 @@ public class Coin {
     }
 
 
-    public Coin(String name, Double value, Double sell, Double variation) {
+    public Coin(String name, Double buy, Double sell, Double variation) {
         this.name = name;
-        this.value = value;
+        this.buy = buy;
         this.sell = sell;
         this.variation = variation;
     }
-
 
     public String getName() {
         return name;
@@ -31,12 +30,12 @@ public class Coin {
         this.name = name;
     }
 
-    public Double getValue() {
-        return value;
+    public Double getBuy() {
+        return buy;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setBuy(Double buy) {
+        this.buy = buy;
     }
 
     public Double getSell() {

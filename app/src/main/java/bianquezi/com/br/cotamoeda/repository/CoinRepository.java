@@ -1,18 +1,21 @@
 package bianquezi.com.br.cotamoeda.repository;
 
 import android.content.Context;
+import android.os.AsyncTask;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 import bianquezi.com.br.cotamoeda.constant.CoinConstants;
+import bianquezi.com.br.cotamoeda.entity.Coin;
 import bianquezi.com.br.cotamoeda.infrastructure.InternetNotAvailableException;
 import bianquezi.com.br.cotamoeda.utils.NetWorkUtils;
 
-public class CoinRepository {
+public class CoinRepository extends AsyncTask<Void, Integer, String>{
 
     private Context mContext;
 
@@ -21,7 +24,28 @@ public class CoinRepository {
         this.mContext = mContext;
     }
 
-    public String getCoins() throws InternetNotAvailableException {
+    @Override
+    protected String doInBackground(Void... voids) {
+
+        try {
+            return this.getCoins();
+        } catch (InternetNotAvailableException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
+    protected void onPostExecute(String s) {
+        super.onPostExecute(s);
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+    }
+
+    private String getCoins() throws InternetNotAvailableException {
 
         if(!NetWorkUtils.isConnectionAvailable(mContext)){
             throw new InternetNotAvailableException();
@@ -82,4 +106,5 @@ public class CoinRepository {
             }
         }
     }
+
 }
