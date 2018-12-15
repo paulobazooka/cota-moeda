@@ -33,9 +33,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/gold-coins-11530998393xtf85riude.png" />
-                                      <entry key="outputName" value="ic_help" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/iconfinder_finance-29_808656.png" />
+                                      <entry key="outputName" value="sign_pound2" />
                                     </map>
                                   </option>
                                 </PersistentState>
