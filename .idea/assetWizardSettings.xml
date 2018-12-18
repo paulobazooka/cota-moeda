@@ -35,8 +35,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/iconfinder_finance-29_808656.png" />
-                                      <entry key="outputName" value="sign_pound2" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/peso_argentino.png" />
+                                      <entry key="outputName" value="sign_peso" />
                                     </map>
                                   </option>
                                 </PersistentState>

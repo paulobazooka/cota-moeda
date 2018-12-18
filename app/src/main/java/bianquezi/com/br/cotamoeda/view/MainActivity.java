@@ -97,11 +97,12 @@ public class MainActivity extends AppCompatActivity
             jsonToCoinConverterPeso.execute(typeCoin, CoinConstants.NAME.PESO_ARGENTINO);
             Coin peso = jsonToCoinConverterPeso.get();
 
-            mViewHolder.bitcoin.setText(CoinConstants.SIGN.REAL_SIGN + String.valueOf(bitcoin.getBuy()));
-            mViewHolder.dollar.setText(CoinConstants.SIGN.REAL_SIGN + String.valueOf(dolar.getBuy()));
-            mViewHolder.euro.setText(CoinConstants.SIGN.REAL_SIGN + String.valueOf(euro.getBuy()));
-            mViewHolder.libra.setText(CoinConstants.SIGN.REAL_SIGN + String.valueOf(libra.getBuy()));
-            mViewHolder.peso.setText(CoinConstants.SIGN.REAL_SIGN + String.valueOf(peso.getBuy()));
+
+            mViewHolder.bitcoin.setText(CoinConstants.SIGN.REAL_SIGN + " " + String.valueOf(bitcoin.getBuy()).replace(".", ","));
+            mViewHolder.dollar.setText(CoinConstants.SIGN.REAL_SIGN + " " + String.valueOf(dolar.getBuy()).replace(".", ","));
+            mViewHolder.euro.setText(CoinConstants.SIGN.REAL_SIGN + " " + String.valueOf(euro.getBuy()).replace(".", ","));
+            mViewHolder.libra.setText(CoinConstants.SIGN.REAL_SIGN + " " + String.valueOf(libra.getBuy()).replace(".", ","));
+            mViewHolder.peso.setText(CoinConstants.SIGN.REAL_SIGN + " " + String.valueOf(peso.getBuy()).replace(".", ","));
 
         } catch (InterruptedException e) {
             Log.i(TAG, "Erro baixar Json da API: ****** " + e + " ******");
